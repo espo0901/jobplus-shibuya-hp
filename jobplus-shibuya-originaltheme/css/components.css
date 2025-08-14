@@ -155,23 +155,20 @@
 }
 
 .c-company-info {
-	/*
-  background-color: #faf7d1;
-  box-shadow: var(--shadow-md);*/
   display: flex;
+  justify-content: center;
   flex-wrap: wrap;
   font-size: 1rem;
-  padding: 3rem;
-  margin-bottom: 3rem;
+  padding-left: 8rem;
 }
 .c-company-info dt {
   width: 30%;
   font-weight: bold;
-  margin-bottom: 1rem;
+  margin-bottom: 0.5rem;
 }
 .c-company-info dd {
   width: 70%;
-  margin-bottom: 1rem;
+  margin-bottom: 0.5rem;
 }
 
 .c-download-block {
@@ -211,8 +208,6 @@
   line-height: 2;
   text-align: left;
 }
-
-
 
 .c-card--type-a,
 .c-card--type-b {
@@ -286,6 +281,13 @@
 .c-nav__item a {
   font-size: 1.25rem;
   font-weight: normal;
+}
+
+.c-nav__item {
+  transition: all 0.3s ease-in-out;
+}
+.c-nav__item:hover {
+  transform: scale(1.1);
 }
 
 .c-nav-sp__list {
@@ -381,7 +383,7 @@
   border-radius: 0.625rem;
   padding: 2rem;
   box-shadow: var(--shadow-md);
-  margin-top: 3rem;
+  margin: 3rem 0;
 }
 
 /* ContactForm7 */
@@ -481,7 +483,6 @@
   justify-content: center;
   align-items: center;
   position: relative;
-  padding: 1rem;
 }
 .c-footer-logo::after {
   content: "";
@@ -525,4 +526,50 @@
   margin-bottom: 1.25rem;
 }
 
+.bottom-button-cover {
+  margin-top: 20px;
+  display: flex;
+  justify-content: center;
+}
 
+.bottom-button {
+  /* ボタン共通 */
+  width: 300px;
+  padding: 10px 0;
+  font-size: 1rem;
+  border-radius: 40px;
+  cursor: pointer;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.5);
+  transition: all 0.2s ease;
+  color: #fff;
+}
+
+.bottom-button:hover {
+  box-shadow: 0 9px 13px rgba(0, 0, 0, 0.5);
+  transform: translateY(-4px);
+}
+
+.bottom-button:active {
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+  transform: translateY(1px);
+}
+
+.bottom-button-large-text {
+  font-size: 1.5rem;
+}
+
+.bottom-button-Agata {
+  background-color: #2D97FC;
+  margin-right: 50px;
+}
+
+.bottom-button-Teichaku {
+  background-color: #FDA92F;
+}
+
+.bg-img-01 p {
+  font-size: 1.4rem;
+  padding-top: 7%;
+  width: 64%;
+  margin: 0 auto;
+}

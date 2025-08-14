@@ -1,8 +1,7 @@
 <section class="p-company" id="company">
     <div class="l-container">
 
-        <h2 class="p-about__title">会社概要</h2>
-
+        <!-- <h2 class="p-about__title">会社概要</h2>
         <dl class="c-company-info">
 			<dt>会社名</dt><dd>株式会社シャンカラ</dd>
 			<dt>事業所名</dt><dd>ジョブぷらす渋谷</dd>
@@ -11,7 +10,7 @@
             <dt>メールアドレス</dt><dd>a.jobplusshibuya@gmail.com</dd>
             <dt>営業時間</dt><dd>9:00～17:00</dd>
             <dt>休業日</dt><dd>日・祝日・夏季休暇・年末年始<br><span>（土曜日は会社カレンダーにより休業します）</span></dd>
-        </dl>
+        </dl> -->
 
         <div class="c-download-block">
 			<div class="u-flex--wrap">

@@ -12,7 +12,7 @@
     height: auto;
   }
   .p-mainvisual__image img{
-    padding-top: 56px;
+    padding-top: 90px;
     height: auto;
   }
   .p-mainvisual__title{
@@ -104,9 +104,13 @@
     padding: 0.5rem;
     position: fixed;
     width: 100%;
-    height: auto;
+    height: 80px;
   }
-
+  .c-logo{
+    position: relative;
+    top: 22px;
+    left: 10px;
+  }
   .c-logo img {
     width: 2.5rem;
     height: 2.5rem;
@@ -196,20 +200,81 @@
     opacity: 1;
   }
 
+  .c-company-info {
+    padding-left: 3rem;
+  }
 }
 
-/* 井上さん追加分 */
-/*
-@media (max-width: 500px) {
-  .bg-img-01 {
-    background-image: url("https://job-plus.net/wp-content/themes/jobplus-shibuya-originaltheme/img/ジョブぷらす渋谷_木目_背景画像SP.png");
-    height:400px;
-  }
-  .bg-img-01 p{
-    padding-top:20%;
-    width:95%;
-    margin:0 auto;
-    font-size:1rem;
+/* ===== <=1400px ===== */
+@media screen and (max-width: 1400px) {
+  .p-mainvisual__mess {
+    width: 80%;
+    bottom: -6%;
   }
 }
-*/
+
+/* ===== <=1100px ===== */
+@media screen and (max-width: 1100px) {
+  .p-mainvisual__mess {
+    width: 90%;
+    bottom: -18%;
+  }
+}
+
+/* ===== <=820px ===== */
+@media screen and (max-width: 820px) {
+  .p-mainvisual__mess {
+    width: 95%;
+    bottom: -25%;
+    font-size: 1rem;
+  }
+
+  .bottom-button {
+    width: 250px;
+    font-size: 0.8rem;
+  }
+
+  .bottom-button-large-text {
+    font-size: 1.2rem;
+  }
+}
+
+/* ===== <=615px ===== */
+@media screen and (max-width: 615px) {
+  .p-mainvisual__mess {
+    /* width 95% と font-size 1rem は <=820px で指定済み */
+    bottom: -40%;
+    padding: 20px 10px;
+  }
+
+  .bottom-button {
+    width: 160px;
+    font-size: 0.7rem;
+  }
+
+  .bottom-button-large-text {
+    font-size: 1rem;
+  }
+
+  .bottom-button-cover {
+    margin-top: 8px;
+  }
+}
+
+/* ===== <=400px ===== */
+@media screen and (max-width: 400px) {
+  .p-mainvisual__mess {
+    /* width 95% / font-size 1rem / padding は上で指定済み */
+    bottom: -60%;
+  }
+
+  .bottom-button {
+    width: 145px;
+    /* font-size 0.7rem は <=615px で指定済み */
+  }
+
+  /* large-text の 1rem も <=615px で指定済み */
+  .bottom-button-cover {
+    margin-top: 5px;
+  }
+}

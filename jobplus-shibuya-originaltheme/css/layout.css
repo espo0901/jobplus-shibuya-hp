@@ -1,7 +1,7 @@
 /* Layout */
 
 .l-container {
-  max-width: 1200px;
+  max-width: 1120px;
   padding: 0 1rem;
   margin-left: auto;
   margin-right: auto;
@@ -28,9 +28,11 @@
 }
 
 .l-footer__content {
+  max-width: 1120px;
+  margin: 0 auto;
   display: flex;
   justify-content: space-between;
-  align-items: flex-start;
+  align-items: center;
   flex-wrap: wrap;
   gap: 2rem;
   margin-top: 2rem;
