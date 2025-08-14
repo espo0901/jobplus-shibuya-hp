@@ -1,0 +1,56 @@
+css/
+├─ base.css         ← リセット、共通
+├─ layout.css       ← ヘッダー・フッターなどの構造
+├─ components.css   ← ボタン・カード・フォームなどの部品
+├─ utilities.css    ← mt-1 / d-flex などの汎用クラス
+├─ pages.css        ← ページごとの個別スタイル
+└─ style.css        ← 各CSSをまとめて読み込む（@import）
+
+
+■ 定番クラス名一覧（カテゴリー別）
+【構造・レイアウト系】
+クラス名	用途
+.container	横幅を制限した中央寄せ用（max-widthなど）
+.wrapper	セクション内の包み枠、.containerの下層によく使う
+.row	フレックスやグリッドの行単位
+.col	.row内のカラム（カラム幅調整するなら.col-6など）
+.section	1つのまとまり（LPの各ブロック）
+.inner	.sectionの内側、余白や位置調整
+
+【タイポグラフィ】
+クラス名	用途
+.heading	大見出し（h1〜h2相当）
+.subheading	サブタイトルや小見出し
+.text	汎用テキスト
+.text-center	中央揃え
+.text-right	右揃え
+.lead	リード文（大きめの説明文）
+
+【間隔（スペーシング）】
+クラス名	用途
+.mt-1〜.mt-5	上の余白（margin-top）
+.mb-1〜.mb-5	下の余白（margin-bottom）
+.pt-1〜.pt-5	上の内側余白（padding-top）
+.pb-1〜.pb-5	下の内側余白（padding-bottom）
+.mx-auto	水平方向の中央寄せ（margin: 0 auto）
+
+【コンポーネント系】
+クラス名	用途
+.btn	ボタン共通
+.btn--primary	主ボタン（CTAなど）
+.btn--secondary	サブボタン（戻る、閉じるなど）
+.card	ボックス状のコンポーネント
+.card__title	カードの見出し
+.card__body	カードの本文
+.form-group	入力欄ごとのまとまり
+.input	汎用インプット
+.label	フォームラベル
+
+【ユーティリティ系（小技）】
+クラス名	用途
+.d-flex	display: flex
+.flex-center	中央揃え（justify + align）
+.hidden	非表示（display: none）
+.visible	強制表示（display: block）
+.nowrap	改行しない（white-space: nowrap）
+.overflow-hidden	スクロール隠しやモーダル内に使う

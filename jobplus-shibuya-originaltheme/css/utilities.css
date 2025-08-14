@@ -1,0 +1,54 @@
+/* Utility Classes */
+.u-mt-1 { margin-top: 0.25rem; }
+.u-mt-2 { margin-top: 0.5rem; }
+.u-mb-2 { margin-bottom: 0.5rem; }
+.u-text-center { text-align: center; }
+.u-text-right { text-align: right; }
+.u-text-left { text-align: left; }
+.u-d-flex { display: flex; }
+.u-flex-column { flex-direction: column; }
+
+.u-sp {
+    display: none;
+}
+.u-pc {
+    display: flex;
+}
+
+.u-flex {
+    display: flex;
+}
+
+.u-flex--wrap {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+    justify-content: center;
+}
+
+.u-flex--reverse {
+    flex-direction: row-reverse;
+}
+
+@media screen and (max-width: 768px) {
+    .u-sp {
+        display: block;
+    }
+    .u-pc {
+        display: none;
+    }
+
+    .l-header__sp {
+        display: block;
+    }
+
+    .u-flex,
+    .u-flex--reverse {
+        flex-direction: column !important;
+    }
+
+    .p-about__img,
+    .p-about__text {
+        width: 100%;
+    }
+}

@@ -1,0 +1,81 @@
+jQuery(document).ready(function($){
+    /*=================================================
+    トップへ戻るボタン
+    ===================================================*/
+    let ttb = $('.c-to-top-btn');
+    let hamburger_btn = $('#hamburger-btn');
+    let mask = $('#mask');
+    let fixed_menu = $('.c-fixed-menu');
+
+    ttb.hide();     // とりあえずボタン非表示
+    fixed_menu.hide();
+
+    // 規定値以上スクロールでボタン表示
+    $(window).scroll(function(){
+        if(window.innerWidth >= 768){ //PC画面の場合のみ処理
+            if($(this).scrollTop() > 700){
+                ttb.fadeIn(); // 700px以上スクロールで表示
+            }else{
+                ttb.fadeOut();
+            }
+
+            // ＃headerのfixed
+            if($(this).scrollTop() > 400){
+                fixed_menu.fadeIn();
+                $(".site-menu-fixed").addClass("fixed");
+            }else{
+                fixed_menu.fadeOut();
+                $(".site-menu-fixed").removeClass("fixed");
+            }
+        }
+        
+    })
+
+    // #to-top-btnクリック時のイベント
+    ttb.click(function () {
+        $('body,html').animate({scrollTop: 0}, 600, "swing");
+        return false;
+    })
+
+    /*=================================================
+    スムーススクロール
+    ===================================================*/
+    $('a[href^="#"]').click(function(event){
+        event.preventDefault(); // デフォルトの動作（ページジャンプ）を防ぐ
+
+        let href = $(this).attr("href");
+        let target = $(href == "#" || href == "" ? 'html' : href);
+        let position = target.offset().top;
+        $("html, body").animate({scrollTop:position}, 600, "swing");
+    })
+
+    /*=================================================
+    ハンバーガーメニュー on-off スマホ用
+    ===================================================*/
+    $('#hamburger-btn').on('click', function(){
+        hamburger();
+    })
+
+    $('#mask, nav a').on('click', function(){
+        hamburger();
+    })
+
+    // ハンバーガーmethod
+    function hamburger(){
+    $('header').toggleClass('open');
+    if($('header').hasClass('open')){
+        $('#mask').addClass('open')
+    } else {
+        $('#mask').removeClass('open')
+    }}
+
+    /*=================================================
+    コンタクトフォーム7のフォーム送信成功後にサンクスページに飛ばす
+    ===================================================*/
+    $(document).on('wpcf7mailsent', function() {
+        window.location.href = "/thanks";
+    });
+    
+    // AOSの初期化 これせんとうごかねぇ
+    AOS.init();
+})

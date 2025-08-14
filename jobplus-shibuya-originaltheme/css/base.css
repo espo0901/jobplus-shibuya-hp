@@ -1,0 +1,59 @@
+/* Reset + Typography */
+
+:root {
+  /* フォントファミリー */
+  --font-base: 'Mochiy Pop One', sans-serif;  /* 全体に使われてる */
+  --font-heading: 'RocknRoll One', sans-serif;
+  --font-sub: 'Yusei Magic', sans-serif;
+
+  /* カラー */
+  --color-bg: #fcf2e5;   /* main, footerなど背景 20250524変更　変更前->#fffdfa */
+  --color-text: #333;         /* 通常テキスト */
+  --color-header-bg: #c7e3be; /* ヘッダー背景など */
+  --color-primary: #b9d7e9;   /* ボタン1 */
+  --color-secondary: #f0ebb9; /* ボタン2 */
+  --color-accent: #faf7d1;    /* フッター装飾 */
+  --color-link: #3669b2;      /* フッターリンクなど */
+  --color-shadow: rgba(0, 0, 0, 0.3); /* ホバーやシャドウに使用 */
+  --color-frame: #000;        /* 枠線系 */
+
+  /* シャドウ */
+  --shadow-sm: 0 2px 4px var(--color-shadow);
+  --shadow-md: 0 4px 6px var(--color-shadow);
+  --shadow-lg: 0 6px 15px var(--color-shadow);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: var(--font-base);
+  line-height: 1.6;
+  color: var(--color-text);
+  /* 井上さん追加<!--20250526追加↓--> */
+  background-color: #F9F5F0;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+ul,
+ol {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+img, video {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+
+

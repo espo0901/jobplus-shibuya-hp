@@ -1,0 +1,206 @@
+/* Page-specific styles */
+
+/* .p-mainvisual */
+.p-mainvisual {
+  height: 100vh;
+  margin-bottom: 20px;
+  position: relative;
+}
+
+/* 井上さん変更 2025 6月3日追加　トップの画像サイズ変更*/
+.p-mainvisual__image {
+  text-align: center;
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  position: relative;
+  margin-top:-30px;
+}
+.p-mainvisual__image img {
+  max-width: 85% !important;
+  height: auto;
+  border-radius: 3px;
+  margin: 0 auto;
+  box-shadow: none;
+}
+
+.p-mainvisual__image::before,
+.p-mainvisual__image::after {
+  content: "";
+  position: absolute;
+  background-image: url('../img/アセット 3top上部装飾.png');
+  background-size: contain;
+  background-repeat: no-repeat;
+  width: 200px;
+  height: 200px;
+}
+.p-mainvisual__image::before {
+  display: none;
+  top: 0;
+  left: 0;
+}
+.p-mainvisual__image::after {
+  display: none;
+  top: 0;
+  right: 0;
+  transform: scaleX(-1);
+}
+
+.p-mainvisual__text {
+  position: absolute;
+  top: 40%;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.p-mainvisual__buttons {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  bottom: 0%;
+  width: 100%;
+  padding: 0 3rem;
+}
+
+/* .p-about */
+.p-about {
+  padding: 4rem 0;
+  overflow-x: hidden;
+}
+
+/* 井上さん追加<!--20250526追加↓--> */
+.top-cp-moji{
+  font-size:2.3rem;
+  font-weight:normal;
+}
+.mrgin-top-add-1{
+    margin-top:80px;
+}
+/*
+.mrgin-top-add-2{
+    margin-top:130px;
+}
+*/
+
+.bg-img-01 {
+  background-image: url("https://job-plus.net/wp-content/themes/jobplus-shibuya-originaltheme/img/ジョブぷらす渋谷_木目_背景画像02PC.png");
+  background-size: contain;
+  background-position: center center !important;
+  background-repeat: no-repeat; 
+  width: 100%;
+  height:450px;
+  margin:0 auto;
+}
+.balloon-dec{
+  position: relative;
+	
+  
+}
+.balloon-dec::before,
+.balloon-dec::after {
+  content: "";
+  position: absolute;
+  top:-80px;
+  width: 300px; /* 装飾画像のサイズ */
+  height: 300px;
+	z-index:-10;
+}
+.balloon-dec::before {
+  left: -170px; /* 左側に配置 */
+  background-image: url('https://job-plus.net/wp-content/themes/jobplus-shibuya-originaltheme/img/ジョブぷらす渋谷_風船02.svg'); 
+  background-size: contain;
+  background-repeat: no-repeat;
+  transform: scaleX(-1) rotate(10deg);
+}
+
+.balloon-dec::after {
+  right: -170px; /* 右側に配置 */
+  background-image: url('https://job-plus.net/wp-content/themes/jobplus-shibuya-originaltheme/img/ジョブぷらす渋谷_風船02.svg');
+  background-size: contain;
+  background-repeat: no-repeat;
+  transform: rotate(10deg); 
+}
+/*
+.bg-img-01 p{
+  font-size:1.4rem;
+  padding-top:7%;
+  width:64%;
+  margin:0 auto;
+}
+*/
+/* <!--20250526追加↑--> */
+/*2025 6 11 とりあえずPCだけ追加↓*/
+/*
+.p-mainvisual__mess{
+	width:400px;
+	bottom:10px; 
+	position: absolute; 
+	left: 51%; 
+	transform: translateX(-50%); 
+	padding: 20px 10px; 
+	background-color: white;
+	border: 3px solid black;
+	border-radius: 20px;
+}
+
+*/
+
+/*2025 6 11　↑*/
+.p-about__intro {
+  margin-bottom: 3rem;
+  text-align: center;
+}
+
+.p-about__title {
+  text-align: center;
+  margin-bottom: 3rem;
+}
+.p-about__title img{
+  display: inline-block;
+  /* height: 3rem; */
+}
+
+.p-about__block {
+  margin-bottom: 4rem;
+  align-items: center;
+}
+
+.p-about__img img {
+  width: 100%;
+  height: auto;
+  border-radius: 0.5rem;
+  box-shadow: var(--shadow-md);
+}
+
+.p-about__text h3 {
+  font-size: 1.5rem;
+  font-weight: bold;
+  margin-bottom: 1rem;
+}
+
+.p-about__text p {
+  font-size: 1rem;
+  line-height: 1.8;
+}
+
+/* .p-company */
+.p-company {
+  padding: 4rem 0;
+}
+
+/* .p-business */
+.p-business {
+  padding: 4rem 0;
+}
+
+/* .p-contact */
+.p-contact__block {
+  margin-bottom: 4rem;
+}
+
+#mask{
+  display: none;
+}
