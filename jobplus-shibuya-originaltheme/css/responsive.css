@@ -1,7 +1,54 @@
-@media screen and (max-width: 768px) {
+/* ----------------------------------
+  スマホ用 600px以下
+------------------------------------*/
+@media screen and (max-width: 600px) {
+  .l-header {
+    position: fixed;
+    width: 100%;
+  }
+  .l-header__inner {
+    padding: 1rem;
+    width: 100%;
+  }
+
+  .u-flex,
+  .u-flex--reverse {
+    flex-direction: column;
+  }
+
+  .p-about__img,
+  .p-about__text {
+    width: 100%;
+  }
   /* レイアウト調整 */
   .l-container {
     padding: 0 1rem;
+  }
+
+  .c-nav{
+    pointer-events: none;
+    position: absolute;
+    inset-block-start: 100%;
+    inset-inline: 0;
+    color: var(--color-bg);
+    background: rgba(51, 51, 51, 0.8);
+    border-bottom: 1px solid ;
+    padding: 1rem;
+    flex-direction: column;
+    gap: 0;
+    opacity: 0;
+    transform: translateY(-10px) scaleY(.95);
+    transition: all 0.3s ease;
+  }
+  .c-nav a{
+    display: block;
+    padding: 0.8rem 0;
+  }
+  .c-nav.isOpen{
+    opacity: 1;
+    transform: none;
+    pointer-events: auto;
+    height: 100vh;
   }
 
   /* メインビジュアル */
@@ -16,7 +63,7 @@
     height: auto;
   }
   .p-mainvisual__title{
-    padding: 1.5rem 0;
+    
   }
   .p-mainvisual__text {
     position: static;
@@ -31,6 +78,26 @@
     flex-direction: column;
     align-items: center;
     gap: 1rem;
+  }
+
+  .p-mainvisual__mess {
+    position: initial;
+    transform: scale(0.8);
+    left: 0;
+    bottom: 0;
+    flex-direction: column;
+    width: 100%;
+    height: auto;
+    padding: 30px 30px;
+    background-color: rgba(255, 255, 255, 0.9);
+    border: 3px solid #FAD380;
+    border-radius: 20px;
+    font-size: 1.2rem;
+    color: #444444;
+  }
+
+  .bottom-button-cover{
+    flex-direction: column;
   }
 
   .p-about{
@@ -100,25 +167,6 @@
   }
 
   /* メニューやヘッダー調整が必要ならここに追加 */
-  .l-header{
-    padding: 0.5rem;
-    position: fixed;
-    width: 100%;
-    height: 80px;
-  }
-  .c-logo{
-    position: relative;
-    top: 22px;
-    left: 10px;
-  }
-  .c-logo img {
-    width: 2.5rem;
-    height: 2.5rem;
-  }
-
-  .c-nav-sp{
-    padding-top: 3rem;
-  }
 
   .c-company-info {
     flex-direction: column;
@@ -139,65 +187,32 @@
     box-shadow: var(--shadow-sm);
   }
 
-  #hamburger-btn{
-      position: fixed;
-      width: 30px;
-      height: 30px;
-      cursor: pointer;
-      top: 20px;
-      right: 20px;
-      z-index: 30;
+  .hamburger-btn{
+    display: inline-grid;
+    place-content: center;
+    gap: 4px;
+    inline-size: 40px;
+    block-size: 40px;
+    background: transparent;
+    border: 0;
+    padding: 0;
+    cursor: pointer;
   }
-  #hamburger-btn span{
-      position: absolute;
-      display: block;
-      width: 30px;
-      height: 2px;
-      background-color: #000;
-      transition: all 0.4s;
+  .hamburger__bar {
+    inline-size: 22px;
+    block-size: 2px;
+    background: black;
+    border-radius: 2px;
+    transition: transform 0.2s ease, opacity 0.2s ease;
   }
-  #hamburger-btn span:nth-of-type(1){
-      top: 0px;
+  .hamburger-btn.isOpen .hamburger__bar:nth-child(1) {
+    transform: translateY(6px) rotate(45deg);
   }
-  #hamburger-btn span:nth-of-type(2){
-      top: 10px;
-  }
-  #hamburger-btn span:nth-of-type(3){
-      top: 20px;
-  }
-  .open #hamburger-btn span{
-      background-color: #fff;
-  }
-  .open #hamburger-btn span:nth-of-type(1){
-      transform: rotate(315deg);
-      top: 10px;
-  }
-  .open #hamburger-btn span:nth-of-type(2){
-      opacity: 0;
-  }
-  .open #hamburger-btn span:nth-of-type(3){
-      transform: rotate(-315deg);
-      top: 10px;
-  }
-
-  #mask{
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100vw;
-    height: 50px;
-    z-index: 15;
+  .hamburger-btn.isOpen .hamburger__bar:nth-child(2) {
     opacity: 0;
-    transition: opacity 0.9s ease;
   }
-
-  .open #mask{
-    display: block;
-    width: 100vw;
-    height: 100vh;
-    background: rgba(0, 0, 0, 0.85);
-    z-index: 15;
-    opacity: 1;
+  .hamburger-btn.isOpen .hamburger__bar:nth-child(3) {
+    transform: translateY(-6px) rotate(-45deg);
   }
 
   .c-company-info {
@@ -205,76 +220,11 @@
   }
 }
 
-/* ===== <=1400px ===== */
-@media screen and (max-width: 1400px) {
-  .p-mainvisual__mess {
-    width: 80%;
-    bottom: -6%;
-  }
+/* ----------------------------------
+  タブレット用 601px～1024px
+------------------------------------*/
+@media screen and (min-width: 601px) and (max-width: 1024px) {
+  /* ここにスタイルを記述 */
 }
 
-/* ===== <=1100px ===== */
-@media screen and (max-width: 1100px) {
-  .p-mainvisual__mess {
-    width: 90%;
-    bottom: -18%;
-  }
-}
 
-/* ===== <=820px ===== */
-@media screen and (max-width: 820px) {
-  .p-mainvisual__mess {
-    width: 95%;
-    bottom: -25%;
-    font-size: 1rem;
-  }
-
-  .bottom-button {
-    width: 250px;
-    font-size: 0.8rem;
-  }
-
-  .bottom-button-large-text {
-    font-size: 1.2rem;
-  }
-}
-
-/* ===== <=615px ===== */
-@media screen and (max-width: 615px) {
-  .p-mainvisual__mess {
-    /* width 95% と font-size 1rem は <=820px で指定済み */
-    bottom: -40%;
-    padding: 20px 10px;
-  }
-
-  .bottom-button {
-    width: 160px;
-    font-size: 0.7rem;
-  }
-
-  .bottom-button-large-text {
-    font-size: 1rem;
-  }
-
-  .bottom-button-cover {
-    margin-top: 8px;
-  }
-}
-
-/* ===== <=400px ===== */
-@media screen and (max-width: 400px) {
-  .p-mainvisual__mess {
-    /* width 95% / font-size 1rem / padding は上で指定済み */
-    bottom: -60%;
-  }
-
-  .bottom-button {
-    width: 145px;
-    /* font-size 0.7rem は <=615px で指定済み */
-  }
-
-  /* large-text の 1rem も <=615px で指定済み */
-  .bottom-button-cover {
-    margin-top: 5px;
-  }
-}

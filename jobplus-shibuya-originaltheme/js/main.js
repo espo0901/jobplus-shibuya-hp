@@ -1,38 +1,46 @@
 jQuery(document).ready(function($){
+    const BREAK_POINT_SP_MAX = 600;
+    const BREAK_POINT_TB_MIN = 601; 
+    const BREAK_POINT_TB_MAX = 1024;
+
+    // トップへ戻るボタン
+    const $ttb = $('.c-to-top-btn');
+
+    // ハンバーガーボタン
+    const $hamburger_btn = $('#hamburger-btn');
+    const $nav = $('nav');
+    const isMenuOpen = 'isOpen';
+
+    // スクロールメニュー表示
+    const $fixed_menu = $('.c-fixed-menu');
     /*=================================================
     トップへ戻るボタン
     ===================================================*/
-    let ttb = $('.c-to-top-btn');
-    let hamburger_btn = $('#hamburger-btn');
-    let mask = $('#mask');
-    let fixed_menu = $('.c-fixed-menu');
-
-    ttb.hide();     // とりあえずボタン非表示
-    fixed_menu.hide();
+    $ttb.hide();
+    $fixed_menu.hide();
 
     // 規定値以上スクロールでボタン表示
     $(window).scroll(function(){
-        if(window.innerWidth >= 768){ //PC画面の場合のみ処理
+        if(window.innerWidth >= BREAK_POINT_TB_MIN){ //PC画面の場合のみ処理
             if($(this).scrollTop() > 700){
-                ttb.fadeIn(); // 700px以上スクロールで表示
+                $ttb.fadeIn();
             }else{
-                ttb.fadeOut();
+                $ttb.fadeOut();
             }
 
             // ＃headerのfixed
             if($(this).scrollTop() > 400){
-                fixed_menu.fadeIn();
+                $fixed_menu.fadeIn();
                 $(".site-menu-fixed").addClass("fixed");
             }else{
-                fixed_menu.fadeOut();
+                $fixed_menu.fadeOut();
                 $(".site-menu-fixed").removeClass("fixed");
             }
         }
-        
     })
 
     // #to-top-btnクリック時のイベント
-    ttb.click(function () {
+    $ttb.click(function () {
         $('body,html').animate({scrollTop: 0}, 600, "swing");
         return false;
     })
@@ -52,21 +60,21 @@ jQuery(document).ready(function($){
     /*=================================================
     ハンバーガーメニュー on-off スマホ用
     ===================================================*/
-    $('#hamburger-btn').on('click', function(){
+    $($hamburger_btn).on('click', function(){
         hamburger();
     })
 
-    $('#mask, nav a').on('click', function(){
+    $('nav a').on('click', function(){
         hamburger();
     })
 
     // ハンバーガーmethod
     function hamburger(){
-    $('header').toggleClass('open');
-    if($('header').hasClass('open')){
-        $('#mask').addClass('open')
-    } else {
-        $('#mask').removeClass('open')
+        $hamburger_btn.toggleClass(isMenuOpen);
+            if($hamburger_btn.hasClass(isMenuOpen)){
+                $($nav).addClass(isMenuOpen);
+            } else {
+                $($nav).removeClass(isMenuOpen);
     }}
 
     /*=================================================

@@ -22,79 +22,33 @@
 <body <?php body_class(); ?>>
 
   <header class="l-header">
-    <div class="l-header__inner u-flex u-pc">
+    <div class="l-header__inner">
       <div class="c-logo">
         <img src="<?= esc_url(get_theme_file_uri('/img/site-logo.png')); ?>" alt="ジョブぷらす渋谷 ロゴ">
       </div>
+
+      <div id="hamburger-btn" class="hamburger-btn">
+        <span class="hamburger__bar"></span>
+        <span class="hamburger__bar"></span>
+        <span class="hamburger__bar"></span>
+      </div>
       
       <?php if(is_front_page()): ?>
-          <nav class="c-nav">
-            <ul class="c-nav__list">
-              <li class="c-nav__item"><a href="#"><span class="c-underline-1">ホーム</span></a></li>
-              <li class="c-nav__item"><a href="#business"><span class="c-underline-1">ジョブぷらす渋谷について</span></a></li>
-              <li class="c-nav__item"><a href="#company"><span class="c-underline-1">会社概要</span></a></li>
-				<?php /*
-				<li class="c-nav__item"><a href="<?= esc_url(home_url('/retention-support')) ?>">定着支援</a></li>
-				*/ ?>
-              <li class="c-nav__item"><a href="#state"><span class="c-underline-1">定着支援</span></a></li>
-              <li class="c-nav__item"><a href="#contact"><span class="c-underline-1">アクセス・お問い合わせ</span></a></li>
-            </ul>
-          </nav>
-      <?php else: ?>
-          <nav class="c-nav">
-            <ul class="c-nav__list">
-              <li class="c-nav__item"><a href="<?= esc_url(home_url()) ?>"><span class="c-underline-1">ホーム</span></a></li>
-              <li class="c-nav__item"><a href="<?= esc_url(home_url()) ?>#business"><span class="c-underline-1">ジョブぷらす渋谷について</span></a></li>
-              <li class="c-nav__item"><a href="<?= esc_url(home_url()) ?>#company"><span class="c-underline-1">会社概要</span></a></li>
-				<?php /*
-				<li class="c-nav__item"><a href="<?= esc_url(home_url('/retention-support')) ?>">定着支援</a></li>
-				*/ ?>
-              <li class="c-nav__item"><a href="#state"><span class="c-underline-1">定着支援</span></a></li>
-              <li class="c-nav__item"><a href="<?= esc_url(home_url()) ?>#contact"><span class="c-underline-1">アクセス・お問い合わせ</span></a></li>
-            </ul>
-          </nav>
-      <?php endif; ?>
-    </div>
-
-    <div class="u-sp">
-      <div class="c-logo">
-        <img src="<?= esc_url(get_theme_file_uri('/img/site-logo.png')); ?>" alt="">
-      </div>
-
-      <div id="mask">
-        <nav class="c-nav-sp">
-          <?php if(is_front_page()): ?>
-              <ul class="c-nav-sp__list">
-                <li><a href="#">ホーム</a></li>
-                <li><a href="#business">ジョブぷらす渋谷について</a></li>
-                <li><a href="#company">会社概要</a></li>
-				  <?php /*
-				<li><a href="<?= esc_url(home_url('/retention-support')) ?>">定着支援</a></li>
-				*/ ?>
-                <li><a href="#state">定着支援</a></li>
-                <li><a href="#contact">アクセス・お問い合わせ</a></li>
-              </ul>
-          <?php else: ?>
-              <ul class="c-nav-sp__list">
-                <li><a href="<?= esc_url(home_url()) ?>">ホーム</a></li>
-                <li><a href="<?= esc_url(home_url()) ?>#business">ジョブぷらす渋谷について</a></li>
-                <li><a href="<?= esc_url(home_url()) ?>#company">会社概要</a></li>
-				  <?php /*
-				<li><a href="<?= esc_url(home_url('/retention-support')) ?>">定着支援</a></li>
-				*/ ?>
-                <li><a href="<?= esc_url(home_url()) ?>#state">定着支援</a></li>
-                <li><a href="<?= esc_url(home_url()) ?>#contact">アクセス・お問い合わせ</a></li>
-              </ul>
-          <?php endif; ?>
+        <nav class="c-nav">
+          <a href="#">ホーム</a>
+          <a href="#business">ジョブぷらす渋谷について</a>
+          <a href="#company">会社概要</a>
+          <a href="#state">定着支援</a>
+          <a href="#contact">アクセス・お問い合わせ</a>
         </nav>
-      </div>
-      
-      <div id="hamburger-btn">
-        <span></span>
-        <span></span>
-        <span></span>
-      </div>
-
-      
+      <?php else: ?>
+        <nav class="c-nav">
+          <a href="<?= esc_url(home_url()) ?>">ホーム</a>
+          <a href="<?= esc_url(home_url()) ?>#business">ジョブぷらす渋谷について</a>
+          <a href="<?= esc_url(home_url()) ?>#company">会社概要</a>
+          <a href="#state">定着支援</a>
+          <a href="<?= esc_url(home_url()) ?>#contact">アクセス・お問い合わせ</a>
+        </nav>
+      <?php endif; ?>
     </div>
   </header>

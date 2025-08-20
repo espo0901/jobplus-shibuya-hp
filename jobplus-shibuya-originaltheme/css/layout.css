@@ -8,18 +8,15 @@
 }
 
 .l-header {
-  background-color: #c7e3be;
-  padding: 1.3rem; 
+  background-color: #c7e3be; 
   width: 100%;
   z-index: 15;
 }
 .l-header__inner {
   display: flex;
-  justify-content: space-between;
   align-items: center;
-}
-.l-header__sp {
-  display: none;
+  justify-content: space-between;
+  padding: 1rem 3rem;
 }
 
 .l-footer {

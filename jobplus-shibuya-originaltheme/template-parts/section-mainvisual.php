@@ -27,11 +27,11 @@
 </section>
 
 <div class="c-fixed-menu">
-	<ul class="c-nav__list">
+	<ul class="c-nav u-flex--wrap">
 		<li class="c-nav__item"><a href="#">ホーム</a></li>
 		<li class="c-nav__item"><a href="#business">ジョブぷらす渋谷について</a></li>
 		<li class="c-nav__item"><a href="#company">会社概要</a></li>
-		       <li class="c-nav__item"><a href="#state">定着支援</a></li>
+		<li class="c-nav__item"><a href="#state">定着支援</a></li>
 		<li class="c-nav__item"><a href="#contact">アクセス・お問い合わせ</a></li>
 	</ul>
 </div>

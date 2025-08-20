@@ -40,11 +40,11 @@
 
 		<div class="l-container">
 			<h2 class="p-about__title">
-				           <img src="<?= get_theme_file_uri('/img/出品代行.png'); ?>" alt="出品代行">
+				<img src="<?= get_theme_file_uri('/img/ジョブプラス渋谷_施設内でのお仕事.svg'); ?>" alt="出品代行">
 			</h2>
 			<div class="c-media">
 				<div class="c-media__img">
-					               <img src="<?= get_theme_file_uri('/img/ジョブプラス渋谷_出品代行_イラスト.png'); ?>" alt="施設外就労">
+					<img src="<?= get_theme_file_uri('/img/ジョブプラス渋谷_出品代行_イラスト.png'); ?>" alt="施設外就労">
 				</div>
 				<div class="c-media__text">
 					<p>
@@ -58,7 +58,7 @@
 
 		<div class="l-container">
 			<h2 class="p-about__title">
-				<img src="<?= get_theme_file_uri('/img/施設外就労.png'); ?>" alt="施設外就労">
+				<img src="<?= get_theme_file_uri('/img/ジョブプラス渋谷_施設外就労でのお仕事.svg'); ?>" alt="施設外就労">
 			</h2>
 			<div class="c-media">
 				<div class="c-media__text">
