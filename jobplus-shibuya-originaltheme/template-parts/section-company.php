@@ -32,7 +32,7 @@
         </div>
 
         <div class="c-btn-area">
-            <a class="c-btn c-btn--primary" href="#contact-form">お問い合わせはこちら</a>
+            <a class="c-btn c-btn--primary" href="#contact-form">お問い合わせ・見学受付は<br>こちらをクリック</a>
         </div>
 
     </div>

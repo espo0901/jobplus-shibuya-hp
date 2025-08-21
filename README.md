@@ -8,7 +8,7 @@ WordPress 向けのオリジナルテーマによるコーポレート／採用�
 ## 概要
 - 目的：福祉事業所の LP/HP を WordPress テーマで提供
 - 形態：**テーマ単体**（プラグイン依存を最小化）
-- 目標：軽量・高速・保守性重視（BEM 設計、WP コーディング規約順守）
+- 目標：軽量・高速・保守性重視（BEM 設計、WPコーディング規約順守）
 
 ## 特徴
 - **軽量**：jQuery などの外部依存を極力削減し、必要最低限の JS のみ
@@ -17,7 +17,7 @@ WordPress 向けのオリジナルテーマによるコーポレート／採用�
 
 ## 技術スタック
 - **WordPress テーマ**（PHP 8.3 対応想定）
-- **PHP / CSS / JavaScript（Vanilla）**
+- **PHP / CSS / JavaScript**
 
 ## 作者
 - **Leon.C / LazyGenius.dev**

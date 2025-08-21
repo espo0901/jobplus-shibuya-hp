@@ -1,4 +1,8 @@
 jQuery(document).ready(function($){
+    // AOSの初期化 これせんとうごかねぇ
+    AOS.init();
+
+    // メディアのブレイクポイント
     const BREAK_POINT_SP_MAX = 600;
     const BREAK_POINT_TB_MIN = 601; 
     const BREAK_POINT_TB_MAX = 1024;
@@ -10,9 +14,11 @@ jQuery(document).ready(function($){
     const $hamburger_btn = $('#hamburger-btn');
     const $nav = $('nav');
     const isMenuOpen = 'isOpen';
-
+    
     // スクロールメニュー表示
     const $fixed_menu = $('.c-fixed-menu');
+    const isFixed = "fixed";
+
     /*=================================================
     トップへ戻るボタン
     ===================================================*/
@@ -21,7 +27,7 @@ jQuery(document).ready(function($){
 
     // 規定値以上スクロールでボタン表示
     $(window).scroll(function(){
-        if(window.innerWidth >= BREAK_POINT_TB_MIN){ //PC画面の場合のみ処理
+        if(window.innerWidth >= BREAK_POINT_TB_MAX){ //PC画面の場合のみ処理
             if($(this).scrollTop() > 700){
                 $ttb.fadeIn();
             }else{
@@ -31,10 +37,10 @@ jQuery(document).ready(function($){
             // ＃headerのfixed
             if($(this).scrollTop() > 400){
                 $fixed_menu.fadeIn();
-                $(".site-menu-fixed").addClass("fixed");
+                $(".site-menu-fixed").addClass(isFixed);
             }else{
                 $fixed_menu.fadeOut();
-                $(".site-menu-fixed").removeClass("fixed");
+                $(".site-menu-fixed").removeClass(isFixed);
             }
         }
     })
@@ -68,6 +74,16 @@ jQuery(document).ready(function($){
         hamburger();
     })
 
+    // ESCキーで閉じる
+    $(document).on('keydown', function(event) {
+        console.log(event.key);
+        if (event.key === "Escape") {
+            if ($hamburger_btn.hasClass(isMenuOpen)) {
+                hamburger(); // すでに開いてるときだけ閉じる
+            }
+        }
+    });
+
     // ハンバーガーmethod
     function hamburger(){
         $hamburger_btn.toggleClass(isMenuOpen);
@@ -80,10 +96,7 @@ jQuery(document).ready(function($){
     /*=================================================
     コンタクトフォーム7のフォーム送信成功後にサンクスページに飛ばす
     ===================================================*/
-    $(document).on('wpcf7mailsent', function() {
+    $(document).on('wpcf7mailsent', function(event) {
         window.location.href = "/thanks";
     });
-    
-    // AOSの初期化 これせんとうごかねぇ
-    AOS.init();
 })

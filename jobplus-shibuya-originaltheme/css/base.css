@@ -7,7 +7,7 @@
   --font-sub: 'Yusei Magic', sans-serif;
 
   /* カラー */
-  --color-bg: #fcf2e5;   /* main, footerなど背景 20250524変更　変更前->#fffdfa */
+  --color-bg:  #F9F5F0;   /* main, footerなど背景 20250524変更　変更前->#fffdfa */
   --color-text: #333;         /* 通常テキスト */
   --color-header-bg: #c7e3be; /* ヘッダー背景など */
   --color-primary: #b9d7e9;   /* ボタン1 */
@@ -21,6 +21,18 @@
   --shadow-sm: 0 2px 4px var(--color-shadow);
   --shadow-md: 0 4px 6px var(--color-shadow);
   --shadow-lg: 0 6px 15px var(--color-shadow);
+
+  /* 背景画像（木目調のやつ） */
+  --frame-pc: url("../img/ジョブプラス渋谷_木版背景_16x9.webp");
+  --frame-tb: url("../img/ジョブプラス渋谷_木版背景_4x3.webp");
+  --frame-sp: url("../img/ジョブプラス渋谷_木版背景_9x16.webp");
+
+  /* フォントサイズ */
+  --fs-sm: clamp(1rem, 2.5vw, 1.2rem);
+  --fs-md: clamp(1.4rem, 2vw, 1.8rem);
+  --fs-lg: clamp(1.8rem, 2.5vw, 2.4rem);
+  --fs-xl: clamp(2.2rem, 3vw, 3rem);
+  --fs-2xl: clamp(3rem, 5vw, 4.2rem);
 }
 
 * {
@@ -31,10 +43,11 @@
 
 body {
   font-family: var(--font-base);
+  font-size: var(--fs-sm);
   line-height: 1.6;
   color: var(--color-text);
   /* 井上さん追加<!--20250526追加↓--> */
-  background-color: #F9F5F0;
+  background-color: var(--color-bg);
 }
 
 a {
@@ -53,6 +66,10 @@ img, video {
   display: block;
   max-width: 100%;
   height: auto;
+}
+
+section{
+  padding: 1rem 0;
 }
 
 

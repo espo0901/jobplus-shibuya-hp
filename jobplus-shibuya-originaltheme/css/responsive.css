@@ -20,6 +20,16 @@
   .p-about__text {
     width: 100%;
   }
+
+  .c-logo__text{
+    display: block;
+    text-align: center;
+  }
+
+  .c-fixed-menu{
+    display: none;
+  }
+
   /* レイアウト調整 */
   .l-container {
     padding: 0 1rem;
@@ -62,9 +72,7 @@
     padding-top: 90px;
     height: auto;
   }
-  .p-mainvisual__title{
-    
-  }
+
   .p-mainvisual__text {
     position: static;
     transform: translateX(0%);
@@ -86,6 +94,7 @@
     left: 0;
     bottom: 0;
     flex-direction: column;
+    align-items: center;
     width: 100%;
     height: auto;
     padding: 30px 30px;
@@ -96,23 +105,34 @@
     color: #444444;
   }
 
+  .bottom-button-Agata {
+    margin-right: 0;
+  }
+
   .bottom-button-cover{
     flex-direction: column;
+    gap: 1rem;
   }
 
   .p-about{
     padding: 1rem 0;
   }
+  .p-about__title{
+    font-size: var(--fs-md);
+    font-weight: normal;
+  }
+
+  .p-about__lead{
+    background-image: var(--frame-sp);
+  }
+  .p-about__lead p{
+    padding: 12% 10%;
+    padding-top: 30%;
+    font-size: var(--fs-sm);
+  }
 
   .c-btn-area-about {
-    margin-top: 7rem;
-  }
-
-  .mrgin-top-add-1 {
-    margin-top: 0;
-  }
-  .mrgin-top-add-2 {
-    margin-top: 30px;
+    margin-top: 0rem;
   }
 
   /* アバウト・会社概要・ビジネス（flex → 縦並び） */
@@ -133,16 +153,12 @@
   .c-media__text,
   .c-balloon__text {
     line-height: 1.6;
-}
+  }
 
   .c-box-info {
     flex-direction: column;
   }
 
-  /* セクションタイトル画像 */
-  .c-section-title img {
-    width: 80%;
-  }
 
   /* フッターの配置調整 */
   .l-footer__info,
@@ -165,6 +181,8 @@
     font-size: 1rem;
     padding: 1rem 2rem;
   }
+
+  
 
   /* メニューやヘッダー調整が必要ならここに追加 */
 
@@ -218,13 +236,91 @@
   .c-company-info {
     padding-left: 3rem;
   }
+
+  .balloon-dec::before,
+  .balloon-dec::after {
+    content: "";
+    position: absolute;
+    top:-64px;
+    width: 110px; /* 装飾画像のサイズ */
+
+    background-image: url('../img/ジョブぷらす渋谷_風船02.svg'); 
+    background-size: contain;
+    background-repeat: no-repeat;
+  }
+  .balloon-dec::before {
+    left: -20px; /* 左側に配置 */
+    transform: scaleX(-1) rotate(10deg);
+  }
+  .balloon-dec::after {
+    right: 20px; /* 右側に配置 */
+    transform: rotate(10deg); 
+  }
 }
 
 /* ----------------------------------
   タブレット用 601px～1024px
 ------------------------------------*/
 @media screen and (min-width: 601px) and (max-width: 1024px) {
-  /* ここにスタイルを記述 */
+  .l-header {
+    position: fixed;
+    width: 100%;
+  }
+  .l-header__inner {
+    padding: 1rem;
+    width: 100%;
+  }
+
+  .p-about__title{
+    margin-top: 3rem;
+  }
+
+  .p-about__img,
+  .p-about__text {
+    width: 100%;
+  }
+
+  .p-about__lead{
+    background-image: var(--frame-tb);
+    min-height: 620px;
+  }
+  .p-about__lead p{
+    padding: 10% 9%;
+  }
+
+  .bottom-button-cover {
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+    transform: scale(0.8);
+  }
+
+  .p-mainvisual__title{
+    margin-top: 80px;
+  }
+
+  .p-mainvisual__image {
+    padding-top: 80px;
+    padding-bottom: 80px;
+  }
+  .p-mainvisual__mess {
+    bottom: -25%;
+    align-items: center;
+  }
+
+  .bottom-button-cover{
+    flex-direction: column;
+    gap: 1rem;
+    align-items: center;
+  }
+
+  .bottom-button-Agata {
+    margin-right: 0;
+  }
+
+  .c-company-info {
+    padding-left: 2rem;
+  }
 }
 
 

@@ -1,15 +1,13 @@
-<section class="p-about" id="job">
+<section class="p-about u-pt-16" id="job">
 
 
 	<div class="l-container" data-aos="fade-up" data-aos-duration="1000">
 
-		<div class="p-about__title mrgin-top-add-1 balloon-dec">
-			<h1 class="p-mainvisual__title">
-				<span class="c-underline-2 top-cp-moji" style="z-index:1">働くことへの不安がある<br>ジョブぷらす渋谷にお任せください！</span>
-			</h1>
-		</div>
+		<h1 class="p-about__title balloon-dec">
+			<span class="c-underline-2">働くことへの不安がある<br>ジョブぷらす渋谷にお任せください！</span>
+		</h1>
 
-		<div class="bg-img-01 p-about__intro c-text-box mrgin-top-add-2">
+		<div class="p-about__lead">
 			<p>
 				「はたらく」が、ちょっと楽しくなるジョブぷらす渋谷。<br>
 				経験がなくても、ブランクがあっても大丈夫。<br>
@@ -17,16 +15,14 @@
 				今日の小さな成功が、明日の自信に。<br>
 				成長を感じられるジョブぷらす渋谷で、一緒に働いてみませんか？
 			</p>
-			<br>
 			<div class="c-btn-area-about c-btn-area-about-top">
 				<a class="c-btn c-btn-top c-btn--primary" href="#contact-form">お問い合わせ・見学受付は<br>こちらをクリック</a>
 			</div>
 		</div>
 
-
 		<span id="A-gata"></span>
-       	<h2 class="p-about__title mrgin-top-add-1 mrgin-top-add-2" data-aos="fade" data-aos-duration="1000">
-        	<img src="<?= get_theme_file_uri('/img/小タイトル_シャンカラ就労継続支援A型.png'); ?>" alt="就労継続支援A型">
+       	<h2 class="p-about__title " data-aos="fade" data-aos-duration="1000">
+        	<img src="<?= get_theme_file_uri('/img/ジョブプラス渋谷_就労継続支援A型_見出し.svg'); ?>" alt="就労継続支援A型">
 		</h2>
 		<div class="c-media">
 			<div class="c-media__text">
@@ -80,7 +76,7 @@
 <section class="p-about" id="state">
 	<div class="l-container">
 		<h2 class="p-about__title">
-			           <img src="<?= get_theme_file_uri('/img/小タイトル_シャンカラ就労定着支援.png'); ?>" alt="就労定着支援">
+			           <img src="<?= get_theme_file_uri('/img/ジョブプラス渋谷_就労定着支援_見出し.svg'); ?>" alt="就労定着支援">
 		</h2>
 		       <div class="c-media">
 			<div class="c-media__img">
@@ -99,7 +95,7 @@
 <section class="p-about" id="safety">
 	<div class="l-container">
 		<h2 class="p-about__title">
-			<img src="<?= get_theme_file_uri('/img/みなさんの安心のために.png'); ?>" alt="みなさんの安心のために">
+			<img src="<?= get_theme_file_uri('/img/ジョブプラス渋谷_みなさんの安心のため_見出し.svg'); ?>" alt="みなさんの安心のために">
 		</h2>
 		<div class="c-balloon">
 			<div class="c-balloon__text">

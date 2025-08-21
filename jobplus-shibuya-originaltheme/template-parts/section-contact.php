@@ -2,7 +2,7 @@
     <div class="l-container">
 
         <h2 class="c-section-title">
-        <img src="<?= get_theme_file_uri('/img/アクセス.png') ?>" alt="アクセス">
+            <img src="<?= get_theme_file_uri('/img/ジョブプラス渋谷_アクセス_見出し.svg') ?>" alt="アクセス">
         </h2>
 
         <div class="p-contact__block u-flex u-flex--wrap">
@@ -24,7 +24,7 @@
         </div>
 
         <h2 class="c-section-title">
-            <img src="<?= get_theme_file_uri('/img/グーグルマップ.png') ?>" alt="グーグルマップ">
+            <img src="<?= get_theme_file_uri('/img/ジョブプラス渋谷_Googleマップ_見出し.svg') ?>" alt="グーグルマップ">
         </h2>
         <div class="c-box-media">
             <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3240.8268395083855!2d139.686927!3d35.681265499999995!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6018f300574a6cd3%3A0x8d31c5467d513d8c!2z5qCq5byP5Lya56S-IOOCt-ODo-ODs-OCq-ODqSDlsLHlirTntpnntprmlK_mj7RB5Z6LIOOCuOODp-ODluOBt-OCieOBmea4i-iwtw!5e0!3m2!1sja!2sjp!4v1742363245500!5m2!1sja!2sjp" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade" width="100%" height="600" style="border:0;" allowfullscreen loading="lazy"></iframe>

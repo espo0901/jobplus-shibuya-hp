@@ -27,6 +27,10 @@
         <img src="<?= esc_url(get_theme_file_uri('/img/site-logo.png')); ?>" alt="ジョブぷらす渋谷 ロゴ">
       </div>
 
+      <div>
+        <p class="c-logo__text">就労継続支援A型事業所<br>ジョブぷらす渋谷</p>
+      </div>
+
       <div id="hamburger-btn" class="hamburger-btn">
         <span class="hamburger__bar"></span>
         <span class="hamburger__bar"></span>
