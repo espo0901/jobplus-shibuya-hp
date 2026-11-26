@@ -6,8 +6,17 @@
   --font-heading: 'RocknRoll One', sans-serif;
   --font-sub: 'Yusei Magic', sans-serif;
 
+  /* フォントサイズ */
+  --fs-xs:   clamp(0.75rem, 1.5vw, 0.875rem);
+  --fs-sm:   clamp(1rem, 2vw, 1.2rem);
+  --fs-md:   clamp(1.4rem, 2.5vw, 1.8rem);
+  --fs-lg:   clamp(1.8rem, 3.5vw, 2.4rem);
+  --fs-xl:   clamp(2.2rem, 4.5vw, 3rem);
+  --fs-2xl:  clamp(3rem, 6vw, 4.2rem);
+
   /* カラー */
   --color-bg:  #F9F5F0;   /* main, footerなど背景 20250524変更　変更前->#fffdfa */
+  --color-card-bg: #ffffff;
   --color-text: #333;         /* 通常テキスト */
   --color-header-bg: #c7e3be; /* ヘッダー背景など */
   --color-primary: #b9d7e9;   /* ボタン1 */
@@ -15,24 +24,35 @@
   --color-accent: #faf7d1;    /* フッター装飾 */
   --color-link: #3669b2;      /* フッターリンクなど */
   --color-shadow: rgba(0, 0, 0, 0.3); /* ホバーやシャドウに使用 */
-  --color-frame: #000;        /* 枠線系 */
+  --color-frame: #e0dcdc;        /* 枠線系 */
+  --color-cta-btn: #e67e22;
+  --color-dl-btn: #6cace4;
 
   /* シャドウ */
   --shadow-sm: 0 2px 4px var(--color-shadow);
   --shadow-md: 0 4px 6px var(--color-shadow);
   --shadow-lg: 0 6px 15px var(--color-shadow);
 
+  /* スペース */
+  --space-s: clamp(0.5rem, 2vw, 0.75rem);
+  --space-m: clamp(1rem, 3vw, 1.5rem);
+  --space-l: clamp(2rem, 5vw, 3rem);
+  --space-xl: clamp(3.5rem, 7vw, 5rem);
+
+  /* 角丸 */
+  --radius-sm: 0.5rem;
+  --radius-md: 1rem;
+  --radius-lg: 1.5rem;
+
+  /* ボーダー */
+  --border-thin: 1px solid rgba(0, 0, 0, 0.12);
+  --border-base: 1px solid rgba(0, 0, 0, 0.2);
+  --border-strong: 2px solid var(--color-frame);
+
   /* 背景画像（木目調のやつ） */
   --frame-pc: url("../img/ジョブプラス渋谷_木版背景_16x9.webp");
   --frame-tb: url("../img/ジョブプラス渋谷_木版背景_4x3.webp");
   --frame-sp: url("../img/ジョブプラス渋谷_木版背景_9x16.webp");
-
-  /* フォントサイズ */
-  --fs-sm: clamp(1rem, 2.5vw, 1.2rem);
-  --fs-md: clamp(1.4rem, 2vw, 1.8rem);
-  --fs-lg: clamp(1.8rem, 2.5vw, 2.4rem);
-  --fs-xl: clamp(2.2rem, 3vw, 3rem);
-  --fs-2xl: clamp(3rem, 5vw, 4.2rem);
 }
 
 * {

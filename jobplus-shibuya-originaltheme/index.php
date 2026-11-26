@@ -4,7 +4,7 @@
   <h2 style="text-align: center;">これは「index.php」です。</h2>
 
   <div style="padding-left: 2.5rem;">
-    <h3>上にあるほど優先順位が高いです。</h3>
+    <h3>上にあるほど優先順位が高い</h3>
     <ul>
       <li>front-page.php:フロントページ。サイトのトップページ出力</li>
       <li>home.php:ブログの一覧ページを出力</li>

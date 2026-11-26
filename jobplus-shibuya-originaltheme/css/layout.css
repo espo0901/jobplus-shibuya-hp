@@ -1,22 +1,27 @@
-/* Layout */
-
+/* layout.css */
 .l-container {
-  max-width: 1120px;
-  padding: 0 1rem;
-  margin-left: auto;
-  margin-right: auto;
+  width: min(100% - 2rem, 70rem);
+  margin-inline: auto;
+}
+
+.p-company .l-container{
+	margin-left:auto;
+	margin-right:auto;
+	
 }
 
 .l-header {
-  background-color: #c7e3be; 
-  width: 100%;
+  background-color: var(--color-header-bg); 
+  inline-size: 100%;
   z-index: 15;
 }
 .l-header__inner {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 1rem 3rem;
+  gap: var(--space-s);
+  padding-block: var(--space-s);
+  padding-inline: var(--space-m);
 }
 
 .l-footer {
@@ -25,23 +30,24 @@
 }
 
 .l-footer__content {
-  max-width: 1120px;
-  margin: 0 auto;
+  width: min(100% - 2rem, 70rem);
+  margin-inline: auto;
+  margin-block-start: var(--space-m);
+  padding-block: var(--space-s);
+
   display: flex;
-  justify-content: space-between;
-  align-items: center;
   flex-wrap: wrap;
-  gap: 2rem;
-  margin-top: 2rem;
-  padding: 1rem;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--space-m);
 }
 
 .l-footer__info {
-  width: 55%;
+  flex: 1 1 30rem;
   text-align: left;
 }
 
 .l-footer__map {
-  width: 40%;
+  flex: 1 1 22rem;
 }
 

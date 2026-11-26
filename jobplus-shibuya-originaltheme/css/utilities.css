@@ -1,8 +1,9 @@
 /* Utility Classes */
-.u-pt-16{ padding-top: 8rem;}
 .u-mt-1 { margin-top: 0.25rem; }
 .u-mt-2 { margin-top: 0.5rem; }
+
 .u-mb-2 { margin-bottom: 0.5rem; }
+
 .u-text-center { text-align: center; }
 .u-text-right { text-align: right; }
 .u-text-left { text-align: left; }
@@ -14,4 +15,8 @@
     flex-wrap: wrap;
     gap: 2rem;
     justify-content: center;
+}
+
+.u-border-black{
+    border: 1px solid var(--color-frame);
 }
