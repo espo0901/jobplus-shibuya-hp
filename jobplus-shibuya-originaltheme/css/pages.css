@@ -59,6 +59,11 @@
   --bubble-link-text: var(--color-card-bg);
 }
 
+.p-mainvisual__bubble-rays,
+.p-mainvisual__bubble-arrow {
+  display: none;
+}
+
 .p-mainvisual__bubble-title {
   font-size: 1rem;
   text-wrap: balance;
@@ -107,89 +112,180 @@
 
 @media (min-width: 1024px) {
   .p-mainvisual__stage {
-    --stage-air: clamp(0.5rem, 3svh, 1.5rem);
     position: relative;
-    padding-top: calc(2.75rem + var(--stage-air));
+    aspect-ratio: 4 / 3;
+    container-type: inline-size;
+    padding-top: 9%;
+    border-radius: var(--radius-lg);
+    background: #e9e6e0;
   }
 
   .p-mainvisual__stage .p-mainvisual__image {
-    width: min(100%, 49rem);
     padding: 0;
-    margin-inline: auto;
   }
 
   .p-mainvisual__stage .p-mainvisual__image img {
     max-height: none;
   }
 
+  /* Keep Muse's PC choreography but allow each bubble to grow with its text. */
   .p-mainvisual__bubble {
-    --bubble-tail-inset: clamp(17%, 69% - 14vw, 29%);
     position: absolute;
-    /* Keep tails near the faces as the image moves down. */
-    inset-block-start: calc(var(--stage-air) - 0.5rem);
-    width: min(32%, 21rem);
-    border-radius: 13% / 28%;
+    z-index: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 0.6cqi;
+    min-height: 24.5%;
+    padding: 1.2cqi 2.2cqi 1.6cqi;
+    border: 0.3125rem solid var(--bubble-accent);
+    border-radius: 50%;
+    transform: rotate(var(--bubble-angle));
   }
 
   .p-mainvisual__bubble--visits {
-    inset-inline-start: var(--space-m);
-    border-radius: 27% 29% 24% 26% / 36% 40% 34% 36%;
+    --bubble-accent: #f39800;
+    --bubble-angle: 2deg;
+    --bubble-tail-start: 40%;
+    --bubble-cta: var(--bubble-accent);
+    --bubble-cta-height: clamp(2rem, 3cqi, 2.25rem);
+    --bubble-cta-size: clamp(0.8125rem, 1.15cqi, 0.875rem);
+    inset-block-start: 5.2%;
+    inset-inline-start: 2.6%;
+    width: 33.5%;
   }
 
   .p-mainvisual__bubble--employment {
-    inset-inline-end: var(--space-m);
+    --bubble-accent: #1b7fb8;
+    --bubble-angle: -2deg;
+    --bubble-tail-start: 71%;
+    --bubble-tail-lift: 0.5rem;
+    --bubble-cta: #1674a8;
+    --bubble-cta-height: clamp(2.125rem, 3.33cqi, 2.5rem);
+    --bubble-cta-size: clamp(0.875rem, 1.35cqi, 1.0625rem);
+    inset-block-start: 6.4%;
+    inset-inline-end: 1.4%;
+    width: 40.5%;
+    color: #1f4e79;
   }
 
   .p-mainvisual__bubble--visits .p-mainvisual__bubble-title {
-    color: #a74100;
-    transform: rotate(-3deg);
+    color: #e8420d;
+    font-size: clamp(1.875rem, 3.3cqi, 2.5rem);
+    line-height: 1.35;
   }
 
-  .p-mainvisual__bubble--employment .p-mainvisual__bubble-title {
-    color: var(--color-link);
-    transform: rotate(2deg);
+  .p-mainvisual__bubble--visits .p-mainvisual__bubble-copy {
+    font: 700 clamp(1.125rem, 2cqi, 1.5rem)/1.35 "Noto Sans JP", "Noto Sans CJK JP", sans-serif;
+  }
+
+  .p-mainvisual__bubble--employment :is(.p-mainvisual__bubble-title, .p-mainvisual__bubble-copy) {
+    font-size: clamp(1.0625rem, 1.78cqi, 1.375rem);
+    line-height: 1.35;
+    text-wrap: balance;
   }
 
   .p-mainvisual__bubble-link {
-    margin-inline: 0.75rem;
-    border-radius: 2rem;
+    position: relative;
+    isolation: isolate;
+    max-width: 100%;
+    min-height: 2.75rem;
+    margin-top: 0.4cqi;
+    padding: 0 1.8cqi;
+    border-radius: 999px;
+    background: none;
+    font: 700 var(--bubble-cta-size)/1.35 "Noto Sans JP", "Noto Sans CJK JP", sans-serif;
   }
 
-  /* The small yellow rays sit outside the speech, not over the text. */
-  .p-mainvisual__bubble::before {
+  /* The visible pill can stay slimmer than the actual focusable link. */
+  .p-mainvisual__bubble-link::before {
     position: absolute;
-    inset-block-start: -0.55rem;
-    inset-inline-start: 8%;
-    width: 1.65rem;
-    height: 1.25rem;
-    background: #f4cb37;
-    clip-path: polygon(0 48%, 13% 32%, 53% 80%, 25% 15%, 43% 4%, 68% 76%, 64% 0, 84% 0, 80% 82%, 65% 91%, 49% 97%);
+    z-index: -1;
+    inset: 50% 0 auto;
+    height: var(--bubble-cta-height);
+    border-radius: inherit;
+    background: var(--bubble-cta);
+    transform: translateY(-50%);
+    content: "";
+  }
+
+  .p-mainvisual__bubble-arrow {
+    display: inline;
+  }
+
+  .p-mainvisual__bubble-rays,
+  .p-mainvisual__bubble-rays::before,
+  .p-mainvisual__bubble-rays::after {
+    position: absolute;
+    width: 1cqi;
+    height: 2cqi;
+    border-radius: 0.3125rem;
+    background: #ffcf00;
+    pointer-events: none;
+  }
+
+  .p-mainvisual__bubble-rays {
+    display: block;
+    inset: -16% auto auto calc(2% + 2.17cqi);
+    height: 2.333cqi;
+    transform: rotate(var(--bubble-angle));
+  }
+
+  .p-mainvisual__bubble--employment .p-mainvisual__bubble-rays {
+    inset-inline: auto calc(3% + 2.17cqi);
+  }
+
+  .p-mainvisual__bubble-rays::before,
+  .p-mainvisual__bubble-rays::after {
+    inset-block-start: 0;
+    content: "";
+  }
+
+  .p-mainvisual__bubble-rays::before {
+    inset-inline-end: 2.17cqi;
+    transform: rotate(-22deg);
+  }
+
+  .p-mainvisual__bubble-rays::after {
+    inset-inline-start: 2.17cqi;
+    transform: rotate(22deg);
+  }
+
+  .p-mainvisual__bubble::before,
+  .p-mainvisual__bubble::after {
+    position: absolute;
+    width: 0;
+    height: 0;
+    border-style: solid;
     content: "";
     pointer-events: none;
   }
 
-  .p-mainvisual__bubble--employment::before {
-    inset-inline: auto 8%;
-    transform: scaleX(-1);
+  .p-mainvisual__bubble::before {
+    inset-block-end: calc(-1.875rem + var(--bubble-tail-lift, 0rem));
+    inset-inline-start: var(--bubble-tail-start);
+    border-width: 1.875rem 0.9375rem 0;
+    border-color: var(--bubble-accent) transparent transparent;
   }
 
   .p-mainvisual__bubble::after {
-    position: absolute;
-    inset-block-end: -0.55rem;
-    inset-inline-end: var(--bubble-tail-inset);
-    width: 1rem;
-    height: 1rem;
-    transform: skewX(23deg) rotate(45deg);
-    border-right: 0.125rem solid var(--bubble-accent);
-    border-bottom: 0.125rem solid var(--bubble-accent);
-    background: var(--color-card-bg);
-    content: "";
-    pointer-events: none;
+    inset-block-end: calc(-1.1875rem + var(--bubble-tail-lift, 0rem));
+    inset-inline-start: calc(var(--bubble-tail-start) + 0.25rem);
+    border-width: 1.375rem 0.6875rem 0;
+    border-color: var(--color-card-bg) transparent transparent;
+  }
+}
+
+@media (min-width: 1024px) and (forced-colors: active) {
+  .p-mainvisual__bubble-link {
+    border: 0.125rem solid LinkText;
   }
 
-  .p-mainvisual__bubble--employment::after {
-    inset-inline: var(--bubble-tail-inset) auto;
-    transform: skewX(-23deg) rotate(45deg);
+  .p-mainvisual__bubble::before,
+  .p-mainvisual__bubble::after,
+  .p-mainvisual__bubble-rays {
+    display: none;
   }
 }
 
