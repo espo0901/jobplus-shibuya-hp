@@ -9,7 +9,8 @@ $employment_industries = ['人材関連事業', 'IT', 'メディア事業', '情
 
 <section id="employment-results" class="p-employment-results l-container" aria-labelledby="employment-results-title">
 	<h2 id="employment-results-title" class="p-employment-results__title">
-		ジョブぷらす渋谷から一般企業へ <span>安定の就職実績</span>
+		ジョブぷらす渋谷から一般企業へ
+		<span class="p-employment-results__title-emphasis" data-aos="employment-underline" data-aos-once="true" data-aos-offset="0">安定の就職実績</span>
 	</h2>
 
 	<div class="p-employment-results__years">
