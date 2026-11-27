@@ -34,6 +34,145 @@
   object-fit: contain;
 }
 
+.p-mainvisual__bubbles {
+  display: grid;
+  gap: var(--space-s);
+  width: min(100%, 44rem);
+  margin-inline: auto;
+}
+
+.p-mainvisual__bubble {
+  --bubble-accent: var(--color-cta-btn);
+  --bubble-link-text: #23170e;
+  min-width: 0;
+  padding: 0.75rem;
+  border: 0.125rem solid var(--bubble-accent);
+  border-radius: var(--radius-lg);
+  background: var(--color-card-bg);
+  font-family: var(--font-base);
+  font-size: 0.875rem;
+  text-align: center;
+}
+
+.p-mainvisual__bubble--employment {
+  --bubble-accent: var(--color-link);
+  --bubble-link-text: var(--color-card-bg);
+}
+
+.p-mainvisual__bubble-title {
+  font-size: 1rem;
+  text-wrap: balance;
+}
+
+.p-mainvisual__bubble--visits .p-mainvisual__bubble-title {
+  font-size: var(--fs-md);
+}
+
+.p-mainvisual__bubble-link {
+  display: block;
+  align-content: center;
+  min-height: 2.75rem;
+  margin-top: 0.5rem;
+  padding: 0.375rem 0.625rem;
+  border-radius: var(--radius-sm);
+  background: var(--bubble-accent);
+  color: var(--bubble-link-text);
+}
+
+.p-mainvisual__bubble-link:hover {
+  text-decoration: underline;
+}
+
+.p-mainvisual__bubble-link:focus-visible {
+  outline: 0.125rem solid currentColor;
+  outline-offset: -0.25rem;
+}
+
+@media (min-width: 768px) and (max-width: 1023px) {
+  .p-mainvisual__bubbles {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 1023px) {
+  .p-mainvisual__stage .p-mainvisual__image {
+    padding-bottom: 0;
+  }
+
+  .p-mainvisual__stage + .p-mainvisual__message {
+    margin-top: 0;
+    transform: none;
+  }
+}
+
+@media (min-width: 1024px) {
+  .p-mainvisual__stage {
+    position: relative;
+    padding-top: 2.75rem;
+  }
+
+  .p-mainvisual__stage .p-mainvisual__image {
+    width: min(100%, 49rem);
+    padding: 0;
+    margin-inline: auto;
+  }
+
+  .p-mainvisual__stage .p-mainvisual__image img {
+    max-height: none;
+  }
+
+  .p-mainvisual__bubble {
+    position: absolute;
+    inset-block-start: 0;
+    width: min(32%, 21rem);
+  }
+
+  .p-mainvisual__bubble--visits {
+    inset-inline-start: var(--space-m);
+  }
+
+  .p-mainvisual__bubble--employment {
+    inset-inline-end: var(--space-m);
+  }
+
+  .p-mainvisual__bubble::after {
+    position: absolute;
+    inset-block-end: -0.55rem;
+    inset-inline-end: 14%;
+    width: 1rem;
+    height: 1rem;
+    transform: skewX(23deg) rotate(45deg);
+    border-right: 0.125rem solid var(--bubble-accent);
+    border-bottom: 0.125rem solid var(--bubble-accent);
+    background: var(--color-card-bg);
+    content: "";
+    pointer-events: none;
+  }
+
+  .p-mainvisual__bubble--employment::after {
+    inset-inline: 14% auto;
+    transform: skewX(-23deg) rotate(45deg);
+  }
+}
+
+/* At 1024px the desktop bubbles meet the existing fixed tablet header. */
+@media (width: 1024px) {
+  .p-mainvisual__stage {
+    margin-top: 4.5rem;
+  }
+}
+
+/* Native hash navigation keeps target headings clear of the fixed headers. */
+#contact-form {
+  scroll-margin-top: 5.75rem;
+}
+
+@media (min-width: 601px) and (max-width: 1023px) {
+  #employment-results {
+    scroll-margin-top: 3rem;
+  }
+}
+
 .p-mainvisual__message {
   display: flex;
   flex-direction: column;

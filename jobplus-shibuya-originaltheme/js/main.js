@@ -54,7 +54,8 @@ jQuery(document).ready(function($){
     /*=================================================
     スムーススクロール
     ===================================================*/
-    $('a[href^="#"]').click(function(event){
+    // 吹き出しのCTAはハッシュと固定メニュー用のCSS余白を使う。
+    $('a[href^="#"]').not('.p-mainvisual__bubble-link').click(function(event){
         event.preventDefault(); // デフォルトの動作（ページジャンプ）を防ぐ
 
         let href = $(this).attr("href");
