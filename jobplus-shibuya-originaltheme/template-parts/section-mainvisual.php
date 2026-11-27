@@ -26,13 +26,30 @@
 <section class="p-mainvisual">
 	<div class="p-mainvisual__inner">
 
-		<div class="p-mainvisual__image">
-			<img
-				src="<?= esc_url(lg_get_img_uri('/p-mainvisual__image.png')); ?>"
-				alt="メイン画像"
-				data-aos="fade"
-				data-aos-duration="1800"
-			>
+		<div class="p-mainvisual__stage">
+			<div class="p-mainvisual__image">
+				<img
+					src="<?= esc_url(lg_get_img_uri('/p-mainvisual__image.png')); ?>"
+					alt="メイン画像"
+					data-aos="fade"
+					data-aos-duration="1800"
+				>
+			</div>
+
+			<div class="p-mainvisual__bubbles">
+				<div class="p-mainvisual__bubble p-mainvisual__bubble--visits">
+					<span class="p-mainvisual__bubble-rays" aria-hidden="true"></span>
+					<p class="p-mainvisual__bubble-title">利用者募集！</p>
+					<p class="p-mainvisual__bubble-copy">見学・体験受付中</p>
+					<a class="p-mainvisual__bubble-link" href="#contact-form">お問合せ・見学受付はこちらから<span aria-hidden="true">▶</span></a>
+				</div>
+				<div class="p-mainvisual__bubble p-mainvisual__bubble--employment">
+					<span class="p-mainvisual__bubble-rays" aria-hidden="true"></span>
+					<p class="p-mainvisual__bubble-title">一般就労を目指すならお任せください！</p>
+					<p class="p-mainvisual__bubble-copy">一人ひとりの「働きたい」を形にします。</p>
+					<a class="p-mainvisual__bubble-link" href="#employment-results">就職実績はこちらから<span class="p-mainvisual__bubble-arrow" aria-hidden="true"> ▶</span></a>
+				</div>
+			</div>
 		</div>
 
 		<div class="p-mainvisual__message">
