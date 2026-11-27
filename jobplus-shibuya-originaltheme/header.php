@@ -41,7 +41,6 @@
     <!-- グローバルメニュー -->
     <nav class="c-nav" aria-label="グローバルメニュー">
       <?php foreach ($nav_items as $nav_item): ?>
-        <?php if ($nav_item['id'] === 'state') { continue; } ?>
         <a href="<?= esc_url(lg_get_nav_href($nav_item['id'])); ?>">
           <?= esc_html($nav_item['label']); ?>
         </a>

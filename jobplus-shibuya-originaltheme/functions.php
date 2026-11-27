@@ -21,7 +21,6 @@ function lg_get_nav_items() {
         ['label' => 'ホーム', 'id' => ''],
         ['label' => 'ジョブぷらす渋谷について', 'id' => 'business'],
         ['label' => '会社概要', 'id' => 'company'],
-        ['label' => '就労定着支援', 'id' => 'state'],
         ['label' => 'アクセス・お問い合わせ', 'id' => 'contact'],
     ];
 }
