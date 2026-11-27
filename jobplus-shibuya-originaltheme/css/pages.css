@@ -182,6 +182,147 @@
   height: 5.5rem;
 }
 
+/* Employment results */
+.p-employment-results {
+  max-width: 56rem;
+  padding-block: var(--space-l);
+  padding-inline: var(--space-m);
+  border-radius: var(--radius-md);
+  background-color: var(--color-employment-bg);
+  text-align: center;
+}
+
+.p-employment-results__title {
+  margin-block-end: var(--space-m);
+  font-family: var(--font-base);
+  font-size: var(--fs-sm);
+  font-weight: normal;
+  line-height: 1.45;
+}
+
+.p-employment-results__title-emphasis {
+  position: relative;
+  display: block;
+  inline-size: fit-content;
+  max-inline-size: 100%;
+  margin-inline: auto;
+  padding-block-end: 0.375rem;
+  font-size: var(--fs-lg);
+}
+
+.p-employment-results__title-emphasis::after {
+  position: absolute;
+  inset-inline: 0;
+  inset-block-end: 0;
+  block-size: 0.125rem;
+  border-radius: var(--radius-sm);
+  background-color: var(--color-link);
+  content: "";
+  transform-origin: left center;
+}
+
+/* AOS未実行時とモーション軽減時は、線を最初から表示する。 */
+@media (prefers-reduced-motion: no-preference) {
+  .p-employment-results__title-emphasis.aos-init:not(.aos-animate)::after {
+    transform: scaleX(0);
+  }
+
+  .p-employment-results__title-emphasis.aos-animate::after {
+    animation: employment-results-underline 0.75s ease-out both;
+  }
+}
+
+@keyframes employment-results-underline {
+  from {
+    transform: scaleX(0);
+  }
+
+  to {
+    transform: scaleX(1);
+  }
+}
+
+.p-employment-results__years {
+  display: grid;
+  gap: var(--space-m);
+}
+
+.p-employment-results__card {
+  border: var(--border-thin);
+  border-radius: var(--radius-md);
+  background-color: var(--color-card-bg);
+}
+
+.p-employment-results__year {
+  padding: var(--space-s);
+  border-radius: var(--radius-md) var(--radius-md) 0 0;
+  background-color: var(--color-primary);
+  font-size: var(--fs-sm);
+  font-weight: normal;
+}
+
+.p-employment-results__metrics {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  padding: var(--space-m) var(--space-s);
+  font-size: 0.875rem;
+}
+
+.p-employment-results__metrics > div + div {
+  border-inline-start: var(--border-thin);
+}
+
+.p-employment-results__metrics dd {
+  color: var(--color-link);
+  font-size: var(--fs-xl);
+  font-variant-numeric: tabular-nums;
+  line-height: 1.25;
+}
+
+.p-employment-results__metrics dd span {
+  font-size: var(--fs-sm);
+}
+
+.p-employment-results__industries-title {
+  margin-block: var(--space-m) var(--space-s);
+  font-size: var(--fs-sm);
+  font-weight: normal;
+}
+
+.p-employment-results__industries {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: var(--space-s);
+}
+
+.p-employment-results__industries li {
+  padding: 0.25rem 0.65rem;
+  border: var(--border-thin);
+  border-radius: var(--radius-sm);
+  background-color: var(--color-card-bg);
+  font-size: 0.875rem;
+}
+
+@media screen and (min-width: 48rem) {
+  .p-employment-results__years {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+/* Keep the heading below the existing fixed headers on hash navigation. */
+@media screen and (max-width: 600px) {
+  .p-employment-results {
+    padding-block-start: max(var(--space-l), calc(2.5rem + 3 * var(--space-s)));
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .p-employment-results {
+    padding-block-start: max(var(--space-l), 5.75rem);
+  }
+}
+
 /* ========================================
   section-company
 ======================================== */

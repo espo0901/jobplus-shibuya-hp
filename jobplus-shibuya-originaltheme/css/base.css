@@ -17,6 +17,7 @@
   /* カラー */
   --color-bg:  #F9F5F0;   /* main, footerなど背景 20250524変更　変更前->#fffdfa */
   --color-card-bg: #ffffff;
+  --color-employment-bg: #EDF5E8; /* 就職実績セクションの背景 */
   --color-text: #333;         /* 通常テキスト */
   --color-header-bg: #c7e3be; /* ヘッダー背景など */
   --color-primary: #b9d7e9;   /* ボタン1 */
