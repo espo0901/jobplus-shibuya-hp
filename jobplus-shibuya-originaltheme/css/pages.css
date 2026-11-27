@@ -107,8 +107,9 @@
 
 @media (min-width: 1024px) {
   .p-mainvisual__stage {
+    --stage-air: clamp(0.5rem, 3svh, 1.5rem);
     position: relative;
-    padding-top: 2.75rem;
+    padding-top: calc(2.75rem + var(--stage-air));
   }
 
   .p-mainvisual__stage .p-mainvisual__image {
@@ -124,7 +125,8 @@
   .p-mainvisual__bubble {
     --bubble-tail-inset: clamp(17%, 69% - 14vw, 29%);
     position: absolute;
-    inset-block-start: 0;
+    /* Keep tails near the faces as the image moves down. */
+    inset-block-start: calc(var(--stage-air) - 0.5rem);
     width: min(32%, 21rem);
     border-radius: 13% / 28%;
   }
@@ -140,10 +142,12 @@
 
   .p-mainvisual__bubble--visits .p-mainvisual__bubble-title {
     color: #a74100;
+    transform: rotate(-3deg);
   }
 
   .p-mainvisual__bubble--employment .p-mainvisual__bubble-title {
     color: var(--color-link);
+    transform: rotate(2deg);
   }
 
   .p-mainvisual__bubble-link {
