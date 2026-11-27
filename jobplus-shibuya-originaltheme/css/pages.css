@@ -122,23 +122,57 @@
   }
 
   .p-mainvisual__bubble {
+    --bubble-tail-inset: clamp(17%, 69% - 14vw, 29%);
     position: absolute;
     inset-block-start: 0;
     width: min(32%, 21rem);
+    border-radius: 13% / 28%;
   }
 
   .p-mainvisual__bubble--visits {
     inset-inline-start: var(--space-m);
+    border-radius: 27% 29% 24% 26% / 36% 40% 34% 36%;
   }
 
   .p-mainvisual__bubble--employment {
     inset-inline-end: var(--space-m);
   }
 
+  .p-mainvisual__bubble--visits .p-mainvisual__bubble-title {
+    color: #a74100;
+  }
+
+  .p-mainvisual__bubble--employment .p-mainvisual__bubble-title {
+    color: var(--color-link);
+  }
+
+  .p-mainvisual__bubble-link {
+    margin-inline: 0.75rem;
+    border-radius: 2rem;
+  }
+
+  /* The small yellow rays sit outside the speech, not over the text. */
+  .p-mainvisual__bubble::before {
+    position: absolute;
+    inset-block-start: -0.55rem;
+    inset-inline-start: 8%;
+    width: 1.65rem;
+    height: 1.25rem;
+    background: #f4cb37;
+    clip-path: polygon(0 48%, 13% 32%, 53% 80%, 25% 15%, 43% 4%, 68% 76%, 64% 0, 84% 0, 80% 82%, 65% 91%, 49% 97%);
+    content: "";
+    pointer-events: none;
+  }
+
+  .p-mainvisual__bubble--employment::before {
+    inset-inline: auto 8%;
+    transform: scaleX(-1);
+  }
+
   .p-mainvisual__bubble::after {
     position: absolute;
     inset-block-end: -0.55rem;
-    inset-inline-end: 14%;
+    inset-inline-end: var(--bubble-tail-inset);
     width: 1rem;
     height: 1rem;
     transform: skewX(23deg) rotate(45deg);
@@ -150,7 +184,7 @@
   }
 
   .p-mainvisual__bubble--employment::after {
-    inset-inline: 14% auto;
+    inset-inline: var(--bubble-tail-inset) auto;
     transform: skewX(-23deg) rotate(45deg);
   }
 }
