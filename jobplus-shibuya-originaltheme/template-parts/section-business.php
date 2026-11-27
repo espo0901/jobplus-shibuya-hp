@@ -1,12 +1,12 @@
+<!-- section-business.php -->
 <section class="p-business" id="business">
+    <h2 class="c-section-title">
+        どんな事業所？
+    </h2>
     <div class="l-container">
 
-        <h2 class="c-section-title">
-            <img src="<?= get_theme_file_uri('/img/ジョブプラス渋谷_ジョブぷらす渋谷はどんな事業所_見出し.svg'); ?>" alt="どんな事業所">
-        </h2>
-
         <div class="c-box-info u-flex">
-            <img src="<?= get_theme_file_uri('/img/バンザイ(修正).png'); ?>" alt="支援のポイント">
+            <img src="<?= lg_get_img_uri('/バンザイ(修正).png'); ?>" alt="支援のポイント">
             <p>
 				「働いてみたいけど、自信がない」<br>
 				「職場の人間関係が不安…」<br>
@@ -42,9 +42,19 @@
         <img src="<?= get_theme_file_uri('/img/ジョブプラス渋谷スケジュール20250702.png'); ?>" alt="タイムスケジュール">
 		<h3 style="margin-top:30px;text-align:center">ご自身のリズムに合わせて、はたらく時間を選択できます！</h3>
 
-        <div class="c-btn-area" style="margin-top:100px">
-            <a class="c-btn c-btn--primary" href="#contact-form">お問い合わせ・見学受付は<br>こちらをクリック</a>
-        </div>
+        <!-- CTA -->
+        <section class="c-company-cta">
+            <h3 class="c-company-cta__title">見学・お問い合わせをご希望の方へ</h3>
+            <p class="c-company-cta__text">
+                ご不明な点や見学のご相談は、お問い合わせフォームよりお気軽にご連絡ください。
+            </p>
+
+            <div class="c-company-cta__btn">
+                <a class="c-btn c-btn--primary" href="#contact-form">
+                    お問い合わせ・見学受付はこちら
+                </a>
+            </div>
+        </section>
 
     </div>
 </section>
